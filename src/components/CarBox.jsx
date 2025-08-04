@@ -1,71 +1,83 @@
 import { useState } from "react";
 
-function CardBox({ data, licenseID }) {
-  const [licenseLoad, setLicenseLoad] = useState(true);
+function CarBox({ data, carID }) {
+  const [carLoad, setCarLoad] = useState(true);
   return (
     <>
-      {data[licenseID].map((license, id) => (
+      {data[carID].map((car, id) => (
         <div key={id} className="box-cars">
-          {/* license image */}
+          {/* car */}
           <div className="pick-car">
-            {licenseLoad && <span className="loader"></span>}
+            {carLoad && <span className="loader"></span>}
             <img
-              style={{ display: licenseLoad ? "none" : "block" }}
-              src={license.img}
-              alt="license_img"
-              onLoad={() => setLicenseLoad(false)}
+              style={{ display: carLoad ? "none" : "block" }}
+              src={car.img}
+              alt="car_img"
+              onLoad={() => setCarLoad(false)}
             />
           </div>
           {/* description */}
+          <div>
           <div className="pick-description">
             <div className="pick-description__price">
-              <span>${license.price}</span>/ curso completo
+              <span>${car.price}</span>/ curso
             </div>
             <div className="pick-description__table">
               <div className="pick-description__table__col">
                 <span>Tipo</span>
-                <span>{license.type}</span>
-              </div>
-
-              <div className="pick-description__table__col">
-                <span>Vehículo</span>
-                <span>{license.vehicle}</span>
-              </div>
-
-              <div className="pick-description__table__col">
-                <span>Duración</span>
-                <span>{license.duration}</span>
-              </div>
-
-              <div className="pick-description__table__col">
-                <span>Edad Mínima</span>
-                <span>{license.minAge}</span>
+                <span>{car.type}</span>
               </div>
 
               <div className="pick-description__table__col">
                 <span>Modalidad</span>
-                <span>{license.modality}</span>
+                <span>{car.mode}</span>
               </div>
 
               <div className="pick-description__table__col">
-                <span>Horarios</span>
-                <span>{license.schedule}</span>
+                <span>Tiempo</span>
+                <span>{car.time}</span>
               </div>
 
-              <div className="pick-description__table__col">
-                <span>Certificación</span>
-                <span>{license.certification}</span>
-              </div>
+              
             </div>
-            {/* btn cta */}
-            <a className="cta-btn" href="#booking-section">
-              Inscribirse Ahora
-            </a>
+
+          </div>
+          {car.mode2 && (
+            <>
+           <br/>
+           <div className="pick-description">
+            <div className="pick-description__price">
+              <span>${car.price2}</span>/ curso
+            </div>
+            <div className="pick-description__table">
+              <div className="pick-description__table__col">
+                <span>Tipo</span>
+                <span>{car.type2}</span>
+              </div>
+
+              <div className="pick-description__table__col">
+                <span>Modalidad</span>
+                <span>{car.mode2}</span>
+              </div>
+
+              <div className="pick-description__table__col">
+                <span>Tiempo</span>
+                <span>{car.time2}</span>
+              </div>
+
+              
+            </div>
+
+          </div>
+          </>
+          )}
+          
           </div>
         </div>
       ))}
+      
     </>
   );
 }
 
-export default CardBox;
+export default CarBox;

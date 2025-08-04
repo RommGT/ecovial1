@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BgShape from "../images/hero/hero-bg.png";
+import BgShape from "../images/hero/test6.png";
 import HeroCar from "../images/hero/main-car.png";
 import { useEffect, useState } from "react";
 
@@ -37,26 +37,16 @@ function Hero() {
           <img className="bg-shape" src={BgShape} alt="bg-shape" />
           <div className="hero-content">
             <div className="hero-content__text">
- 
-              <h4>Aprende a conducir</h4>
               <h1>
-                Obtén tu <span>licencia</span> rápido y seguro
+                ESCUELA DE CONDUCTORES
               </h1>
-              <p>
-                Instructores expertos, horarios flexibles y vehículos modernos.
-              </p>
-              <div className="hero-content__text__btns">
-                <Link
-                  onClick={bookBtn}
-                  className="hero-content__text__btns__book-ride"
-                  to="/"
-                >
-                  Más Información &nbsp; <i className="fa-solid fa-circle-check"></i>
-                </Link>
-                <Link className="hero-content__text__btns__learn-more" to="/">
-                  Sobre Nosotros&nbsp; <i className="fa-solid fa-angle-right"></i>
-                </Link>
-              </div>
+              <h2>
+                PROFESIONALES
+              </h2>
+              <h4>
+                INSTITUTO SUPERIOR TECNOLÓGICO LIBERTAD 
+              </h4>
+              
             </div>
 
             {/* img */}

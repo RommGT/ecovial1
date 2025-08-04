@@ -1,9 +1,9 @@
 import { useState } from "react";
 import CarBox from "./CarBox";
-import { CAR_DATA  } from "./CarData";
+import { CAR_DATA } from "./CarData";
 
 function PickCar() {
-  const [active, setActive] = useState("LicenseC");
+  const [active, setActive] = useState("FirstCar");
   const [colorBtn, setColorBtn] = useState("btn1");
 
   const btnID = (id) => {
@@ -20,83 +20,61 @@ function PickCar() {
         <div className="container">
           <div className="pick-container">
             <div className="pick-container__title">
-              <h3>Tipos de Licencias</h3>
-              <h2>Formación Profesional</h2>
-              <p>
-                Elige el tipo de licencia profesional que necesitas según 
-                la normativa ecuatoriana para iniciar tu carrera en el transporte
-              </p>
+              <h3>Licencias profesionales</h3>
+              <h2>Modalidad de cursos y costos</h2>
+             
             </div>
             <div className="pick-container__car-content">
-              {/* pick license */}
+              {/* pick car */}
               <div className="pick-box">
                 <button
                   className={`${coloringButton("btn1")}`}
                   onClick={() => {
-                    setActive("LicenseC");
+                    setActive("FirstCar");
                     btnID("btn1");
                   }}
                 >
-                  Licencia Tipo C
+                 Licencia C
                 </button>
                 <button
                   className={`${coloringButton("btn2")}`}
                   id="btn2"
                   onClick={() => {
-                    setActive("LicenseC1");
+                    setActive("SecondCar");
                     btnID("btn2");
                   }}
                 >
-                  Licencia Tipo C1
+                     Licencia C1
                 </button>
                 <button
                   className={`${coloringButton("btn3")}`}
                   id="btn3"
                   onClick={() => {
-                    setActive("LicenseD");
+                    setActive("ThirdCar");
                     btnID("btn3");
                   }}
                 >
-                  Licencia Tipo D
+                  Licencia D
                 </button>
                 <button
                   className={`${coloringButton("btn4")}`}
                   id="btn4"
                   onClick={() => {
-                    setActive("LicenseD1");
+                    setActive("FourthCar");
                     btnID("btn4");
                   }}
                 >
-                  Licencia Tipo D1
+                  Licencia E
                 </button>
-                <button
-                  className={`${coloringButton("btn5")}`}
-                  id="btn5"
-                  onClick={() => {
-                    setActive("LicenseE");
-                    btnID("btn5");
-                  }}
-                >
-                  Licencia Tipo E
-                </button>
-                <button
-                  className={`${coloringButton("btn6")}`}
-                  id="btn6"
-                  onClick={() => {
-                    setActive("LicenseE1");
-                    btnID("btn6");
-                  }}
-                >
-                  Licencia Tipo E1
-                </button>
+                
+                
               </div>
 
-              {active === "LicenseC" && <CarBox data={CAR_DATA} licenseID={0} />}
-              {active === "LicenseC1" && <CarBox data={CAR_DATA} licenseID={1} />}
-              {active === "LicenseD" && <CarBox data={CAR_DATA} licenseID={2} />}
-              {active === "LicenseD1" && <CarBox data={CAR_DATA} licenseID={3} />}
-              {active === "LicenseE" && <CarBox data={CAR_DATA} licenseID={4} />}
-              {active === "LicenseE1" && <CarBox data={CAR_DATA} licenseID={5} />}
+              {active === "FirstCar" && <CarBox data={CAR_DATA} carID={0} />}
+              {active === "SecondCar" && <CarBox data={CAR_DATA} carID={1} />}
+              {active === "ThirdCar" && <CarBox data={CAR_DATA} carID={2} />}
+              {active === "FourthCar" && <CarBox data={CAR_DATA} carID={3} />}
+            
             </div>
           </div>
         </div>

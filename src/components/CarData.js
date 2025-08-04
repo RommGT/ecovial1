@@ -1,93 +1,62 @@
-import Golf6 from "../images/cars-big/golf6.jpg";
-import AudiA1 from "../images/cars-big/audia1.jpg";
-import Toyota from "../images/cars-big/toyotacamry.jpg";
-import Bmw320 from "../images/cars-big/bmw320.jpg";
-import Benz from "../images/cars-big/benz.jpg";
-import Passat from "../images/cars-big/passatcc.jpg";
+import LicenciaC from "../images/cars-big/licenciac.png";
+import LicenciaC1 from "../images/cars-big/licenciac1.png";
+import LicenciaD from "../images/cars-big/licenciad.png";
+import LicenciaE from "../images/cars-big/licenciae.png";
+
+
 
 export const CAR_DATA = [
   [
     {
-      name: "VW Golf 6",
-      price: "37",
-      img: Golf6,
-      model: "Golf 6",
-      mark: "Volkswagen",
-      year: "2008",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Manual",
-      fuel: "Diesel",
+      name: "Licencia C",
+      price: "958.35",
+      img: LicenciaC,
+      type: "Vehículos livianos comerciales",
+      mode: "Regular",
+      time: "6 meses"
     },
   ],
   [
     {
-      name: "Audi A1 S-Line",
-      price: "45",
-      img: AudiA1,
-      model: "Audi",
-      mark: "A1",
-      year: "2012",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Manual",
-      fuel: "Gasoline",
+      name: "Licencia C1",
+      price: "958.35",
+      img: LicenciaC1,
+      type: "Vehículos de emergencia; policiales y ambulancias",
+      mode: "Regular",
+      time: "6 meses",
+      price2: "363.00",
+      type2: "Vehículos de emergencia; policiales y ambulancias",
+      mode2: "Convalidación con tipo C",
+      time2: "2 meses"
     },
   ],
   [
     {
-      name: "Toyota Camry",
-      price: "30",
-      img: Toyota,
-      model: "Camry",
-      mark: "Toyota",
-      year: "2006",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Automatic",
-      fuel: "Hybrid",
+      name: "Licencia D",
+     price: "1026.50",
+      img: LicenciaD,
+      type: "Transporte público o del estado +26 pasajeros",
+      mode: "Regular",
+      time: "7 meses",
+      price2: "717.00",
+      type2: "Transporte público o del estado +26 pasajeros",
+      mode2: "Convalidación con tipo C",
+      time2: "3 meses"
     },
   ],
   [
     {
-      name: "BMW 320 ModernLine",
-      price: "35",
-      img: Bmw320,
-      model: "320",
-      mark: "BMW",
-      year: "2012",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Manual",
-      fuel: "Diesel",
+      name: "Licencia E",
+      price: "1126.63",
+      img: LicenciaE,
+      type: "Vehículos pesados comerciales +3.6 toneladas",
+      mode: "Regular",
+      time: "9 meses",
+      price2: "842.00",
+      type2: "Vehículos pesados comerciales +3.6 toneladas",
+      mode2: "Convalidación con tipo C",
+      time2: "5 meses"
     },
   ],
-  [
-    {
-      name: "Mercedes-Benz GLK",
-      price: "50",
-      img: Benz,
-      model: "Benz GLK",
-      mark: "Mercedes",
-      year: "2006",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Manual",
-      fuel: "Diesel",
-    },
-  ],
-  [
-    {
-      name: "VW Passat CC",
-      price: "25",
-      img: Passat,
-      model: "Passat CC",
-      mark: "Volkswagen",
-      year: "2008",
-      doors: "4/5",
-      air: "Yes",
-      transmission: "Automatic",
-      fuel: "Gasoline",
-    },
-  ],
+  
 ];
